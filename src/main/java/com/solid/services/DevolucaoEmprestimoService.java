@@ -27,5 +27,7 @@ public class DevolucaoEmprestimoService {
         }
 
         emprestimoLivroRepository.deletar(emprestimoLivro.getId());
+
+        System.out.println("Devolução realizada com sucesso!");
     }
 }

@@ -3,6 +3,7 @@ package com.solid.repositories;
 import com.solid.models.Cliente;
 import com.solid.models.EmprestimoLivro;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -11,6 +12,10 @@ import java.util.stream.Collectors;
 public class EmprestimoLivroRepository implements Repository<EmprestimoLivro, String> {
 
     private Map<String, EmprestimoLivro> emprestimos;
+
+    public EmprestimoLivroRepository(){
+        emprestimos = new HashMap<String, EmprestimoLivro>();
+    }
 
     public List<EmprestimoLivro> buscaPorCliente(String email) {
         return emprestimos

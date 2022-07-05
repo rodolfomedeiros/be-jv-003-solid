@@ -12,7 +12,7 @@ public class ModificarClientePorAtraso implements ValidarDevolucao{
         LocalDate devolucao = emprestimoLivro.getDataDevolucao();
         LocalDate atual = LocalDate.now();
 
-        if(devolucao.isAfter(atual)) {
+        if(atual.isAfter(devolucao)) {
             emprestimoLivro.getCliente().setAtrasos(emprestimoLivro.getCliente().getAtrasos()+1);
         }
         if (emprestimoLivro.getCliente().getAtrasos() >= MAX_ATRASOS){

@@ -31,5 +31,7 @@ public class RealizaEmprestimoService {
         emprestimoLivro.setValor(EmprestimoLivro.geraValorEmprestimo(emprestimoLivro));
 
         emprestimoLivroRepository.inserir(emprestimoLivro);
+
+        System.out.println("Empréstimo realizado com sucesso!");
     }
 }
